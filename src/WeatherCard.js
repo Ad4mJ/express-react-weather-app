@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
 class WeatherCard extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
       return (
         <div className="widgetContainer">
@@ -23,6 +19,7 @@ class WeatherCard extends Component {
                 <div className="place">{this.props.weather.city}</div>
               </div>
             </div>
+            <div className="date"></div>
           </article>
         </div>
       );

@@ -23,11 +23,10 @@ class SearchAutoComplete extends Component {
   }
 
   setLocation() {
-    let location = this.autocomplete.getPlace()
-    this.setState({ 
-        city: location.vicinity
-    });
-    this.props.updateWeather(location.geometry.location.lat(), location.geometry.location.lng());
+    let location = this.autocomplete.getPlace();
+    if(location.name) {
+        this.props.updateWeather(location.geometry.location.lat(), location.geometry.location.lng());
+    }
   }
 
   render() {
